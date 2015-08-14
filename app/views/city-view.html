@@ -1,0 +1,35 @@
+<table class="table eutable">
+  <tr>
+    <td><h3>Details for {{city.name}}</h3></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>City Name</td>
+    <td>{{city.name}}</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{{city.description}}</td>
+  </tr>
+  
+</table>
+
+<div>
+  <a class="btn btn-primary" href="#/countries/{{countryId}}/cities/{{city.id}}/edit">Edit</a>
+  <a class="btn btn-primary" href="#/countries/{{countryId}}/view">Back To List</a>
+</div>
+
+<table class="table eutable">
+  <tr>
+    <td><h3>Attractions</h3></td>
+    <td></td>
+  </tr>
+ <tr ng-repeat="attraction in city.attractions">
+    <td>{{attraction.name}}</td>
+     <td>
+      <a class="btn btn-primary" href="#/countries/{{countryId}}/cities/{{city.id}}/attractions/{{attraction.id}}/view">View</a>
+      <a class="btn btn-danger" ng-click="deleteAttraction(attraction.id)">Delete</a>
+    </td>
+  </tr>
+</table>
+<a class="btn btn-primary" href="#/countries/{{countryId}}/cities/{{city.id}}/attractions/new">Add New Attraction</a>

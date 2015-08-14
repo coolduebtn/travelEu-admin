@@ -1,0 +1,19 @@
+<div class="form-group" ng-class="{ 'has-error': cityForm.name.$invalid && cityForm.name.$dirty}">
+  <label for="name" class="col-sm-2 control-label">Name</label>
+  <div class="col-sm-10">
+    <input name="name" type="text" ng-model="city.name" class="form-control" id="title" placeholder="city name Here" required/>
+  </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': cityForm.description.$invalid && cityForm.description.$dirty}">
+  <label for="description" class="col-sm-2 control-label">Description</label>
+  <div class="col-sm-10">
+    <textarea name="description" ng-model="city.description" class="form-control" id="description" placeholder="Description about the city" required></textarea>
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" class="btn btn-primary" value="Save" ng-disabled="cityForm.$invalid"/>
+  </div>
+</div>

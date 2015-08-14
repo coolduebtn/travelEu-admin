@@ -1,0 +1,16 @@
+
+<a class="btn-primary btn-lg nodecoration" href="#/countries/new">Add New Country</a>
+
+<table class="table eutable">
+  <tr>
+    <td><h3>Countries</h3></td>
+    <td></td>
+  </tr>
+ <tr ng-repeat="country in countries">
+    <td>{{country.name}}</td>
+    <td>
+      <a class="btn btn-primary" href="#/countries/{{country.id}}/view">View</a>
+      <a class="btn btn-danger"  ng-click="deleteCountry(country)">Delete</a>
+    </td>
+  </tr>
+</table>

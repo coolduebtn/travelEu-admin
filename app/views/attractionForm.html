@@ -1,0 +1,68 @@
+<div class="form-group" ng-class="{ 'has-error': attractionForm.name.$invalid && attractionForm.name.$dirty}">
+  <label for="name" class="col-sm-2 control-label">Name</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="attraction.name" class="form-control" id="title" placeholder="attraction name Here" name="name" required/>
+  </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': attractionForm.description.$invalid && attractionForm.description.$dirty}">
+  <label for="description" class="col-sm-2 control-label">Description</label>
+  <div class="col-sm-10">
+    <textarea ng-model="attraction.description" class="form-control" id="description" placeholder="Description about the attraction" name="description" required></textarea>
+  </div>
+</div>
+<div class="form-group">
+  <label for="address" class="col-sm-2 control-label">Address</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="attraction.address" class="form-control" id="address" placeholder="attraction address Here"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="phone" class="col-sm-2 control-label">Phone</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="attraction.phone" class="form-control" id="phone" placeholder="attraction phone Here"/>
+  </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': attractionForm.email.$invalid && attractionForm.email.$dirty}">
+  <label for="email" class="col-sm-2 control-label">Email</label>
+  <div class="col-sm-10">
+    <input name="email" type="email" ng-model="attraction.email" class="form-control" id="email" placeholder="attraction email Here"/>
+  </div>
+</div>
+<div class="form-group" ng-class="{ 'has-error': attractionForm.website.$invalid && attractionForm.website.$dirty}">
+  <label for="website" class="col-sm-2 control-label">Website</label>
+  <div class="col-sm-10">
+    <input type="url" name="website" ng-model="attraction.website" class="form-control" id="website" placeholder="attraction website Here"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="hours" class="col-sm-2 control-label">Hours/timings</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="attraction.hours" class="form-control" id="hours" placeholder="attraction hours Here"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="travelInstructions" class="col-sm-2 control-label">Travel Instructions</label>
+  <div class="col-sm-10">
+    <textarea ng-model="attraction.travelInstructions" class="form-control" id="travelInstructions" placeholder="travelInstructions about the attraction"></textarea>
+  </div>
+</div>
+<div class="form-group">
+  <label for="siteRating" class="col-sm-2 control-label">site Rating</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="attraction.siteRating" class="form-control" id="siteRating" placeholder="attraction siteRating Here"/>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="tips" class="col-sm-2 control-label">tips</label>
+  <div class="col-sm-10">
+    <textarea ng-model="attraction.tips" class="form-control" id="tips" placeholder="tips about the attraction"></textarea>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" class="btn btn-primary" value="Save" ng-disabled="attractionForm.$invalid"/>
+  </div>
+</div>
