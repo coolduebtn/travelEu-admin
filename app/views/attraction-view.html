@@ -43,6 +43,12 @@
     <td>Tips</td>
     <td>{{attraction.tips}}</td>
   </tr>
+  <tr>
+    <td>Categories</td>
+    <td>
+      <span ng-repeat="category in attraction.categories">{{category.name}}{{$last ? '' : ', '}}</span>
+    </td>
+  </tr>
   
 </table>
 

@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angular-loading-bar',
+    'ngTagsInput'
   ])
   .constant('baseUrl', 'http://localhost:8080')
   .factory('Country', function($resource,baseUrl) {
@@ -36,6 +38,14 @@ angular
   })
   .factory('Attraction', function($resource,baseUrl) {
        var url=baseUrl + '/attractions/:id';
+      return $resource(url, { id:'@id' }, {
+        update: {
+          method: 'PUT'
+        }
+    });
+  })
+  .factory('Category', function($resource,baseUrl) {
+       var url=baseUrl + '/categories/:id';
       return $resource(url, { id:'@id' }, {
         update: {
           method: 'PUT'
